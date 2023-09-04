@@ -1,0 +1,59 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text {
+    text-align: center;
+    font-size: 3em;
+    letter-spacing: 10px;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    animation:
+        typing 2s steps(20),
+        cursor .4s step-end infinite alternate;
+}
+
+.footer {
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.resume-button {
+    margin-top: 20px;
+    display: inline;
+}
+
+
+
+.table {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+strong {
+    color: rgb(249, 120, 120);
+}
+
+button {
+    padding: 0;
+    padding-left: 3px;
+    padding-right: 3px;
+    margin: 0;
+    vertical-align: middle;
+}
+
+/* @keyframes cursor {
+    50% { border-color: transparent }
+} */
+
+@keyframes typing {
+    from {
+        width: 0
+    }
+}
