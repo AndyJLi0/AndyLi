@@ -28,12 +28,128 @@
     display: inline;
 }
 
-
-
 .table {
     margin-top: 20px;
     margin-bottom: 20px;
     width: 100%;
+    margin-bottom: 5px;
+}
+
+.description {
+    font-size: 14px;
+    font-style: italic;
+    padding-left: 1em;
+    text-align: right;
+
+}
+
+.note {
+    font-size: 8pt;
+    padding-left: 0.5em;
+}
+
+.project {
+    text-align: center;
+    display: block;
+}
+
+.image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+
+}
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.contact-section {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.contact-link {
+    text-decoration: none;
+    color: cornflowerblue;
+    font-size: 18px;
+    margin: 0 10px;
+}
+
+.contact-link,
+.contact-link:visited {
+    text-decoration: none;
+    font-size: 18px;
+    margin: 0 10px;
+}
+
+.contact-link i {
+    margin-right: 8px;
+}
+
+#github {
+    color: teal;
+}
+
+#github,
+#github:visited {
+    color: teal;
+}
+
+#email {
+    color: rgb(249, 120, 120);
+}
+
+#email,
+#email:visited {
+    color: rgb(249, 120, 120);
+}
+
+#linkedin {
+    color: cornflowerblue;
+}
+
+#linkedin,
+#linkedin:visited {
+    color: cornflowerblue;
+}
+
+#resume {
+    color: goldenrod;
+}
+
+#resume,
+#resume:visited {
+    color: goldenrod;
+}
+
+#empty-space {
+    margin-bottom: 5em;
+}
+
+h4 {
+    margin-top: 15px;
+    display: inline-block;
+}
+
+
+h2 {
+    margin-top: 80px;
+    display: inline;
+    text-decoration: underline;
+
+}
+
+td {
+    text-align: center;
+}
+
+th {
+    text-align: center;
 }
 
 strong {
@@ -41,11 +157,11 @@ strong {
 }
 
 button {
-    padding: 0;
-    padding-left: 3px;
-    padding-right: 3px;
-    margin: 0;
+    margin-top: 1em;
+    margin-left: 0.5em;
+    margin-bottom: 1em;
     vertical-align: middle;
+    color-scheme: dark;
 }
 
 /* @keyframes cursor {

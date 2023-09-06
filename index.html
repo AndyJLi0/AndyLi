@@ -5,8 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Andy Li</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="https://latex.now.sh/style.css">
+    <link rel="stylesheet" href="style.css">
+
 
 </head>
 
@@ -19,75 +21,113 @@
         </header>
 
         <div class="abstract" id="center">
-            <h2>About Me</h2>
+            <h2><u>About Me</u></h2>
             <p>I am a second year student studying <strong>Computer Science and Math</strong> at the <strong>University
                     of
                     British Columbia. </strong> I love skateboarding, lifting weights, and photography. </p>
         </div>
 
-        <button title="yo" onclick="alert('Good job!')">
-            click me
-        </button>
-        <div>
-            <h2>Skills and Expertise</h2>
+        <!--NEW SECTION -->
 
+        <div class="section-heading">
+            <h2>Skills and Expertise</h2>
+            <span class="description">Technical skills listed from most to least proficient.</span>
+        </div>
+
+        <div>
             <table class="table">
                 <tbody>
                     <tr>
-                        <th scope="col" style="color: goldenrod;">Frontend</th>
-                        <th scope="col" style="color: teal;">Backend</th>
-                        <th scope="col" style="color: cornflowerblue;">Frameworks</th>
-                        <th scope="col" style="color: lightcoral;">Technologies</th>
-                    </tr>
-                    <tr>
-                        <td>stuff</td>
-                        <td>stuff</td>
-                        <td>stuff</td>
-                        <td>stuff</td>
+                        <th scope="col" style="color: goldenrod; text-align: center">Languages</th>
+                        <th scope="col" style="color: teal; text-align: center;">Libraries</th>
+                        <th scope="col" style="color: cornflowerblue; text-align: center;">Technologies</th>
+                        <th scope="col" style="color: mediumorchid; text-align: center;">Coursework</th>
 
                     </tr>
                     <tr>
-                        <td>stuff</td>
-                        <td>stuff</td>
-                        <td>stuff</td>
-                        <td>stuff</td>
+                        <td style="text-align: center">Java</td>
+                        <td style="text-align: center">JUnit</td>
+                        <td style="text-align: center">Git</td>
+                        <td style="text-align: center">Software Construction</td>
+
                     </tr>
                     <tr>
-                        <td>stuff</td>
-                        <td>stuff</td>
-                        <td>stuff</td>
-                        <td>stuff</td>
+                        <td style="text-align: center">Python</td>
+                        <td style="text-align: center">Pytest</td>
+                        <td style="text-align: center"><span class="latex">L<span>a</span>T<span>e</span>X</span></td>
+                        <td style="text-align: center">Computer Systems*</td>
+
                     </tr>
                     <tr>
-                        <td>stuff</td>
-                        <td>stuff</td>
-                        <td>stuff</td>
-                        <td>stuff</td>
+                        <td style="text-align: center">JavaScript</td>
+                        <td style="text-align: center">NumPy</td>
+                        <td style="text-align: center">IntelliJ</td>
+                        <td style="text-align: center;">Algorithms and Data Structures*</td>
                     </tr>
                 </tbody>
             </table>
+            <span class="note">*taking right now</span>
         </div>
 
-        <div>
-            <h2>Past Projects</h2>
-            <p>
-                here is a list of all my notable previous projects.
-            </p>
+        <!--NEW SECTION -->
+
+        <div class="section-heading">
+            <h2>Projects</h2>
+            <span class="description"> A list of all my notable previous projects.</span>
+        </div>
+        <div class="project">
+            <h4><strong>3 Body Simulation</strong></h4>
+            <span>- visualization of a 3 body system sing matplotlib </span>
+            <img src="./assets/threeBodyProblem.png" alt="Project 1 Image" class="image">
+            <button onclick="threeBodySystem()">Project Repository</button>
         </div>
 
-        <div class="resume-button">
-            <p>
-                Click here to download my <button onclick="downloadResume()">Resume </button>
-            </p>
+
+        <div class="project">
+            <h4><strong>JavaCards</strong></h4>
+            <span>- a Java flashcard application with the JavaSwing GUI </span>
+            <img src="./assets/JavaCards.png" alt="Project 2 Image" class="image">
+            <button onclick="javaCards()">Project Repository</button>
         </div>
+
+        <div class="project">
+            <h4><strong>IMGuessr.ai</strong></h4>
+            <span>- <em>Skribblio</em> inspired prompt guessing game powered by DALL &#x00B7; E art</span>
+            <img src="./assets/IMGuesser.png" alt="Project 3 Image" class="image">
+            <button onclick="promptGuesser()">Project Repository</button>
+        </div>
+
+
+
+        <!--NEW SECTION -->
+        <div class="section-heading">
+            <h2>Resume & Contact</h2>
+            <span class="description"> Learn more about me!</span>
+        </div>
+
+        <div class="contact-section">
+            <a href="path/to/your/resume.pdf" target="_blank" class="contact-link" id="resume">
+                <i class="fas fa-file-pdf"></i> Resume
+            </a>
+            <a href="https://github.com/andyjli0" target="_blank" class="contact-link" id="github">
+                <i class="fab fa-github"></i> GitHub
+            </a>
+            <a href="mailto:andyjiaanli@gmail.com" target="_blank" class="contact-link" id="email">
+                <i class="fas fa-envelope"></i> Email
+            </a>
+            <a href="https://www.linkedin.com/in/andyjli0/" target="_blank" class="contact-link" id="linkedin">
+                <i class="fab fa-linkedin"></i> LinkedIn
+            </a>
+        </div>
+
+        <div id="empty-space"></div>
 
 
     </main>
 
     <p class="footer">
-        Press <kbd>Alt</kbd> + <kbd>t</kbd> to toggle between light and dark mode. <br />
-        Copyright &copy; 2023, Andy Li
-
+        Press <kbd>Alt</kbd> + <kbd>t</kbd> to toggle between light and dark mode. <br>
+        Have a wonderful day!
     </p>
 
 

@@ -8,12 +8,15 @@ document.addEventListener('keydown', function (event) {
     }
 });
 
-function downloadResume() {
-    const a = document.createElement('a');
-    a.href = './assets/Andy Li Resume.pdf';
-    a.download = 'Andy_Li_Resume.pdf';
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-  }
-  
+function threeBodySystem() {
+    window.open('https://github.com/AndyJLi0/JavaCards', '_blank')
+}
+
+
+function javaCards() {
+    window.open('https://github.com/AndyJLi0/JavaCards', '_blank')
+}
+
+function promptGuesser() {
+    window.open('https://github.com/Raywnh/imguessr.ai', '_blank')
+}
