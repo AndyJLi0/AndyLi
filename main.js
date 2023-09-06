@@ -9,7 +9,7 @@ document.addEventListener('keydown', function (event) {
 });
 
 function threeBodySystem() {
-    window.open('https://github.com/AndyJLi0/JavaCards', '_blank')
+    window.open('https://github.com/AndyJLi0/3-body-problem-visualization', '_blank')
 }
 
 
