@@ -1,3 +1,21 @@
+function toggleSection(id) {
+    const section = document.getElementById(id);
+    if (section.style.maxHeight === "0px" || !section.style.maxHeight) {
+        const contentHeight = section.scrollHeight;
+
+        section.classList.add("animating");
+
+        section.style.maxHeight = `${contentHeight}px`;
+
+        setTimeout(() => {
+            section.classList.remove("animating");
+        }, 500);
+    } else {
+        section.style.maxHeight = "0px";
+    }
+}
+
+
 function toggleDarkMode() {
     document.body.classList.toggle("latex-dark");
 }

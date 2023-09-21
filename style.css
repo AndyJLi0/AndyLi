@@ -12,7 +12,7 @@
     white-space: nowrap;
     overflow: hidden;
     animation:
-        typing 2s ,
+        typing 2s,
         cursor .4s step-end infinite alternate;
 }
 
@@ -91,6 +91,19 @@
     margin-right: 8px;
 }
 
+.section-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+    padding: 0 10px;
+}
+
+.animating {
+    padding: 10px 10px;
+}
+
+
+
 #github {
     color: teal;
 }
@@ -141,7 +154,7 @@ h2 {
     margin-top: 80px;
     display: inline;
     text-decoration: underline;
-
+    cursor: pointer;
 }
 
 td {

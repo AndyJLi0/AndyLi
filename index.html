@@ -29,12 +29,12 @@
 
         <!--NEW SECTION -->
 
-        <div class="section-heading">
+        <div class="section-heading" onclick="toggleSection('skills-content')">
             <h2>Skills and Expertise</h2>
             <span class="description">Technical skills listed from most to least proficient.</span>
         </div>
 
-        <div>
+        <div class="section-body" id="skills-content">
             <table class="table">
                 <tbody>
                     <tr>
@@ -59,10 +59,16 @@
 
                     </tr>
                     <tr>
-                        <td style="text-align: center">JavaScript</td>
+                        <td style="text-align: center">C/C++</td>
                         <td style="text-align: center">NumPy</td>
                         <td style="text-align: center">IntelliJ</td>
                         <td style="text-align: center;">Algorithms and Data Structures*</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center">JavaScript</td>
+                        <td style="text-align: center"></td>
+                        <td style="text-align: center"></td>
+                        <td style="text-align: center;"></td>
                     </tr>
                 </tbody>
             </table>
@@ -71,33 +77,34 @@
 
         <!--NEW SECTION -->
 
-        <div class="section-heading">
+        <div class="section-heading" onclick="toggleSection('projects-content')">
             <h2>Projects</h2>
             <span class="description"> A list of all my notable previous projects.</span>
         </div>
-        <div class="project">
-            <h4><strong>3 Body Simulation</strong></h4>
-            <span>- visualization of a 3 body system sing matplotlib </span>
-            <img src="./assets/threeBodyProblem.png" alt="Project 1 Image" class="image">
-            <button onclick="threeBodySystem()">Project Repository</button>
+
+        <div class="section-body" id="projects-content">
+            <div class="project">
+                <h4><strong>3 Body Simulation</strong></h4>
+                <span>- visualization of a 3 body system sing matplotlib </span>
+                <img src="./assets/threeBodyProblem.png" alt="Project 1 Image" class="image">
+                <button onclick="threeBodySystem()">Project Repository</button>
+            </div>
+
+
+            <div class="project">
+                <h4><strong>JavaCards</strong></h4>
+                <span>- a Java flashcard application with the JavaSwing GUI </span>
+                <img src="./assets/JavaCards.png" alt="Project 2 Image" class="image">
+                <button onclick="javaCards()">Project Repository</button>
+            </div>
+
+            <div class="project">
+                <h4><strong>IMGuessr.ai</strong></h4>
+                <span>- <em>Skribblio</em> inspired prompt guessing game powered by DALL &#x00B7; E art</span>
+                <img src="./assets/IMGuesser.png" alt="Project 3 Image" class="image">
+                <button onclick="promptGuesser()">Project Repository</button>
+            </div>
         </div>
-
-
-        <div class="project">
-            <h4><strong>JavaCards</strong></h4>
-            <span>- a Java flashcard application with the JavaSwing GUI </span>
-            <img src="./assets/JavaCards.png" alt="Project 2 Image" class="image">
-            <button onclick="javaCards()">Project Repository</button>
-        </div>
-
-        <div class="project">
-            <h4><strong>IMGuessr.ai</strong></h4>
-            <span>- <em>Skribblio</em> inspired prompt guessing game powered by DALL &#x00B7; E art</span>
-            <img src="./assets/IMGuesser.png" alt="Project 3 Image" class="image">
-            <button onclick="promptGuesser()">Project Repository</button>
-        </div>
-
-
 
         <!--NEW SECTION -->
         <div class="section-heading">
