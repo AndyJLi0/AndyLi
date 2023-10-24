@@ -68,9 +68,12 @@
 }
 
 .contact-section {
+    max-height: 0;
     display: flex;
     justify-content: space-around;
     margin-top: 20px;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
 }
 
 .contact-link {

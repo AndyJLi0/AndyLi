@@ -1,12 +1,20 @@
 function toggleSection(id) {
     const section = document.getElementById(id);
     let icon;
-    if (id === "projects-content") {
-        icon = document.getElementById("dropdown-icon-projects");
-    } else {
-        icon = document.getElementById("dropdown-icon-skills");
+    switch (id) {
+        case "projects-content":
+            icon = document.getElementById("dropdown-icon-projects");
+            break;
+        case "skills-content": 
+            icon = document.getElementById("dropdown-icon-skills");
+            break;
+        case "resume-content":
+            icon = document.getElementById("dropdown-icon-resume"); 
+            break;
+        default:
+            console.error("Unknown section id:", id);
+            return;  // Exit the function on unknown id
     }
-
     if (section.style.maxHeight === "0px" || !section.style.maxHeight) {
         const contentHeight = section.scrollHeight;
 
@@ -51,7 +59,6 @@ function threeBodySystem() {
     window.open('https://github.com/AndyJLi0/3-body-problem-visualization', '_blank')
 }
 
-
 function javaCards() {
     window.open('https://github.com/AndyJLi0/JavaCards', '_blank')
 }
@@ -59,3 +66,5 @@ function javaCards() {
 function promptGuesser() {
     window.open('https://github.com/Raywnh/imguessr.ai', '_blank')
 }
+
+
