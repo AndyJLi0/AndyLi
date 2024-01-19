@@ -55,6 +55,15 @@ document.addEventListener('keydown', function (event) {
     }
 });
 
+
+function rayTracer() {
+    window.open('https://github.com/AndyJLi0/RayTracer', '_blank')
+}
+
+function prunify() {
+    window.open('https://gitfront.io/r/Andyjli0/FonBdihK2nYb/Image-Compressor/', '_blank')
+}
+
 function threeBodySystem() {
     window.open('https://github.com/AndyJLi0/3-body-problem-visualization', '_blank')
 }

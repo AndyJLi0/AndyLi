@@ -60,6 +60,12 @@
     width: 80%;
 
 }
+.image-inline {
+    display: inline;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+}
 
 .section-heading {
     display: flex;
