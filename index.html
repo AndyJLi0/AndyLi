@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Andy Li</title>
@@ -19,156 +19,156 @@
     <meta name="msapplication-config" content="assets/favicons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
 
-</head>
+  </head>
 
-<body class="latex-dark libertinus">
+  <body class="latex-dark libertinus">
     <main>
-        <header class="container">
-            <div class="author">
-                <p class="text">Hi, my name is <span style="color: rgb(217, 147, 255)">Andy Li</span></p>
-            </div>
-        </header>
+      <header class="container">
+        <div class="author">
+          <p class="text">Hi, my name is <span style="color: rgb(217, 147, 255)">Andy Li</span></p>
+        </div>
+      </header>
 
-        <div class="abstract" id="center">
-            <h2><u>About Me</u></h2>
-            <p>I am a second year student studying <strong>Computer Science and Math</strong> at the <strong>University
-                    of
-                    British Columbia. </strong> I love skateboarding, wrestling, and photography. </p>
+      <div class="abstract" id="center">
+        <h2><u>About Me</u></h2>
+        <p>I am a third year student studying <strong>Computer Science and Math</strong> at the <strong>University
+          of
+          British Columbia. </strong> I love skateboarding, wrestling, and photography.</p>
+      </div>
+
+      <!--NEW SECTION -->
+
+      <div class="section-heading" onclick="toggleSection('skills-content')">
+        <h2>Skills and Expertise <i class="fas fa-chevron-down" id="dropdown-icon-skills"></i></h2>
+        <span class="description">Listed in arbitrary order</span>
+      </div>
+
+      <div class="section-body" id="skills-content">
+        <table class="table">
+          <tbody>
+            <tr>
+              <th scope="col" style="color: goldenrod; text-align: center">Languages</th>
+              <th scope="col" style="color: teal; text-align: center;">Libraries</th>
+              <th scope="col" style="color: cornflowerblue; text-align: center;">Technologies</th>
+              <th scope="col" style="color: mediumorchid; text-align: center;">Coursework</th>
+
+            </tr>
+            <tr>
+              <td style="text-align: center">Java</td>
+              <td style="text-align: center">React</td>
+              <td style="text-align: center">Git</td>
+              <td style="text-align: center">Software Engineering*</td>
+
+            </tr>
+            <tr>
+              <td style="text-align: center">C/C++</td>
+              <td style="text-align: center">JUnit</td>
+              <td style="text-align: center">Linux</td>
+              <td style="text-align: center">Algorithm Design & Analysis</td>
+
+            </tr>
+            <tr>
+              <td style="text-align: center">Python</td>
+              <td style="text-align: center">Pytest</td>
+              <td style="text-align: center"><span class="latex">L<span>a</span>T<span>e</span>X</span></td>
+              <td style="text-align: center;">Operating Systems</td>
+            </tr>
+            <tr>
+              <td style="text-align: center">JavaScript</td>
+              <td style="text-align: center">NumPy</td>
+              <td style="text-align: center">IntelliJ</td>
+              <td style="text-align: center;">Computer Networking</td>
+            </tr>
+          </tbody>
+        </table>
+        <span class="note">*currently taking</span>
+      </div>
+
+      <!--NEW SECTION -->
+
+      <div class="section-heading" onclick="toggleSection('projects-content')">
+        <h2>Projects <i class="fas fa-chevron-down" id="dropdown-icon-projects"></i></h2>
+        <span class="description"> A list of all my notable previous projects.</span>
+      </div>
+
+      <div class="section-body" id="projects-content">
+
+        <div class="project">
+          <h4><strong>C++ Ray Tracer</strong></h4>
+          <span>- Ray tracer implemented in C++ following Peter Shirley's 'Ray Tracing One Weekend' </span>
+          <img src="./assets/RayTracer.png" alt="Project 0 Image" class="image">
+          <button onclick="rayTracer()">Project Repository</button>
         </div>
 
-        <!--NEW SECTION -->
+        <div class="project">
+          <h4><strong>Image Compressor</strong></h4>
+          <span>- Quad-tree storage system with simple editing tools</span><br>
+          <img src="./assets/malachi1.png" alt="Project 1-1 Image" class="image-inline">
+          <img src="./assets/malachi2.png" alt="Project 1-2 Image" class="image-inline">
 
-        <div class="section-heading" onclick="toggleSection('skills-content')">
-            <h2>Skills and Expertise <i class="fas fa-chevron-down" id="dropdown-icon-skills"></i></h2>
-            <span class="description">Listed in arbitrary order</span>
+          <button onclick="prunify()">Project Repository</button>
         </div>
 
-        <div class="section-body" id="skills-content">
-            <table class="table">
-                <tbody>
-                    <tr>
-                        <th scope="col" style="color: goldenrod; text-align: center">Languages</th>
-                        <th scope="col" style="color: teal; text-align: center;">Libraries</th>
-                        <th scope="col" style="color: cornflowerblue; text-align: center;">Technologies</th>
-                        <th scope="col" style="color: mediumorchid; text-align: center;">Coursework</th>
-
-                    </tr>
-                    <tr>
-                        <td style="text-align: center">Java</td>
-                        <td style="text-align: center">React</td>
-                        <td style="text-align: center">Git</td>
-                        <td style="text-align: center">Software Construction</td>
-
-                    </tr>
-                    <tr>
-                        <td style="text-align: center">C/C++</td>
-                        <td style="text-align: center">JUnit</td>
-                        <td style="text-align: center">Linux</td>
-                        <td style="text-align: center">Algorithm Design & Analysis</td>
-
-                    </tr>
-                    <tr>
-                        <td style="text-align: center">Python</td>
-                        <td style="text-align: center">Pytest</td>
-                        <td style="text-align: center"><span class="latex">L<span>a</span>T<span>e</span>X</span></td>
-                        <td style="text-align: center;">Hardware and Operating Systems*</td>
-                    </tr>
-                    <tr>
-                        <td style="text-align: center">JavaScript</td>
-                        <td style="text-align: center">NumPy</td>
-                        <td style="text-align: center">IntelliJ</td>
-                        <td style="text-align: center;">Computer Networking*</td>
-                    </tr>
-                </tbody>
-            </table>
-            <span class="note">*taking right now</span>
-        </div>
-
-        <!--NEW SECTION -->
-
-        <div class="section-heading" onclick="toggleSection('projects-content')">
-            <h2>Projects <i class="fas fa-chevron-down" id="dropdown-icon-projects"></i></h2>
-            <span class="description"> A list of all my notable previous projects.</span>
-        </div>
-
-        <div class="section-body" id="projects-content">
-
-            <div class="project">
-                <h4><strong>C++ Ray Tracer</strong></h4>
-                <span>- Ray tracer implemented in C++ following Peter Shirley's 'Ray Tracing One Weekend' </span>
-                <img src="./assets/RayTracer.png" alt="Project 0 Image" class="image">
-                <button onclick="rayTracer()">Project Repository</button>
-            </div>
-
-            <div class="project">
-                <h4><strong>Image Compressor</strong></h4>
-                <span>- Quad-tree storage system with simple editing tools</span><br>
-                <img src="./assets/malachi1.png" alt="Project 1-1 Image" class="image-inline">
-                <img src="./assets/malachi2.png" alt="Project 1-2 Image" class="image-inline">
-
-                <button onclick="prunify()">Project Repository</button>
-            </div>
-
-            <div class="project">
-                <h4><strong>3 Body Simulation</strong></h4>
-                <span>- visualization of a 3 body system using matplotlib </span>
-                <img src="./assets/threeBodyProblem.png" alt="Project 2 Image" class="image">
-                <button onclick="threeBodySystem()">Project Repository</button>
-            </div>
-
-
-            <div class="project">
-                <h4><strong>JavaCards</strong></h4>
-                <span>- Java flashcard application with the JavaSwing GUI </span>
-                <img src="./assets/JavaCards.png" alt="Project 3 Image" class="image">
-                <button onclick="javaCards()">Project Repository</button>
-            </div>
-
-            <div class="project">
-                <h4><strong>IMGuessr.ai</strong></h4>
-                <span>- <em>Skribblio</em> inspired prompt guessing game powered by DALL &#x00B7; E art</span>
-                <img src="./assets/IMGuesser.png" alt="Project 4 Image" class="image">
-                <button onclick="promptGuesser()">Project Repository</button>
-            </div>
-        </div>
-
-        <!--NEW SECTION -->
-        <div class="section-heading" onclick="toggleSection('resume-content')">
-            <h2>Resume & Contact <i class="fas fa-chevron-down" id="dropdown-icon-resume"></i></h2>
-            <span class="description"> Learn more about me!</span>
+        <div class="project">
+          <h4><strong>3 Body Simulation</strong></h4>
+          <span>- visualization of a 3 body system using matplotlib </span>
+          <img src="./assets/threeBodyProblem.png" alt="Project 2 Image" class="image">
+          <button onclick="threeBodySystem()">Project Repository</button>
         </div>
 
 
-        <div class="contact-section" id="resume-content">
-            <a href="./assets/Andy Li resume.pdf" target="_blank" class="contact-link" id="resume">
-                <i class="fas fa-file-pdf"></i> Resume
-            </a>
-            <a href="https://github.com/andyjli0" target="_blank" class="contact-link" id="github">
-                <i class="fab fa-github"></i> GitHub
-            </a>
-            <a href="mailto:andyjiaanli@gmail.com" target="_blank" class="contact-link" id="email">
-                <i class="fas fa-envelope"></i> Email
-            </a>
-            <a href="https://www.linkedin.com/in/andyjli0/" target="_blank" class="contact-link" id="linkedin">
-                <i class="fab fa-linkedin"></i> LinkedIn
-            </a>
+        <div class="project">
+          <h4><strong>JavaCards</strong></h4>
+          <span>- Java flashcard application with the JavaSwing GUI </span>
+          <img src="./assets/JavaCards.png" alt="Project 3 Image" class="image">
+          <button onclick="javaCards()">Project Repository</button>
         </div>
 
-        <div id="empty-space"></div>
+        <div class="project">
+          <h4><strong>IMGuessr.ai</strong></h4>
+          <span>- <em>Skribblio</em> inspired prompt guessing game powered by DALL &#x00B7; E art</span>
+          <img src="./assets/IMGuesser.png" alt="Project 4 Image" class="image">
+          <button onclick="promptGuesser()">Project Repository</button>
+        </div>
+      </div>
+
+      <!--NEW SECTION -->
+      <div class="section-heading" onclick="toggleSection('resume-content')">
+        <h2>Resume & Contact <i class="fas fa-chevron-down" id="dropdown-icon-resume"></i></h2>
+        <span class="description"> Learn more about me!</span>
+      </div>
+
+
+      <div class="contact-section" id="resume-content">
+        <a href="./assets/Andy Li resume.pdf" target="_blank" class="contact-link" id="resume">
+          <i class="fas fa-file-pdf"></i> Resume
+        </a>
+        <a href="https://github.com/andyjli0" target="_blank" class="contact-link" id="github">
+          <i class="fab fa-github"></i> GitHub
+        </a>
+        <a href="mailto:andyjiaanli@gmail.com" target="_blank" class="contact-link" id="email">
+          <i class="fas fa-envelope"></i> Email
+        </a>
+        <a href="https://www.linkedin.com/in/andyjli0/" target="_blank" class="contact-link" id="linkedin">
+          <i class="fab fa-linkedin"></i> LinkedIn
+        </a>
+      </div>
+
+      <div id="empty-space"></div>
 
 
     </main>
 
     <p class="footer">
-        Press <kbd>Alt</kbd> + <kbd>t</kbd> to toggle between light and dark mode. <br>
+      Press <kbd>Alt</kbd> + <kbd>t</kbd> to toggle between light and dark mode. <br>
         © 2023 Andy Li |
-Have a wonderful day!
+        Have a wonderful day!
     </p>
 
 
     <script src="main.js"></script>
 
 
-</body>
+  </body>
 
 </html>
