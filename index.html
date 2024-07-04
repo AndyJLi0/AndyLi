@@ -1,174 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Andy Li</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link rel="stylesheet" href="https://latex.now.sh/style.css">
-    <link rel="stylesheet" href="style.css">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/4.0.1/mustache.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.4/p5.min.js"></script>
+  <title>Andy Li</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
 
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png">
-    <link rel="manifest" href="assets/favicons/site.webmanifest">
-    <link rel="mask-icon" href="assets/favicons/safari-pinned-tab.svg" color="#5bbad5">
-    <link rel="shortcut icon" href="assets/favicons/favicon.ico">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="msapplication-config" content="assets/favicons/browserconfig.xml">
-    <meta name="theme-color" content="#ffffff">
+<body>
 
-  </head>
+  <nav>
 
-  <body class="latex-dark libertinus">
-    <main>
-      <header class="container">
-        <div class="author">
-          <p class="text">Hi, my name is <span style="color: rgb(217, 147, 255)">Andy Li</span></p>
-        </div>
-      </header>
+    <div class="nav-header">About</div>
+    <div class="nav-item"><a href="#about">Summary</a></div>
 
-      <div class="abstract" id="center">
-        <h2><u>About Me</u></h2>
-        <p>I am a third year student studying <strong>Computer Science and Math</strong> at the <strong>University
-          of
-          British Columbia. </strong> I love skateboarding, wrestling, and photography.</p>
+    <div class="nav-header">Technical Skills</div>
+    <div id="nav-technical">
+      <script id="technical-nav-template" type="x-tmpl-mustache">
+      {{#technical}}<div class="nav-item"><a href="#{{id}}">{{title}}</a></div>{{/technical}}
+      </script>
+    </div>
+
+    <div class="nav-header">Projects</div>
+    <div id="nav-projects">
+      <script id="project-nav-template" type="x-tmpl-mustache">
+      {{#projects}}<div class="nav-item"><a href="#{{id}}">{{title}}</a></div>{{/projects}}
+      </script>
+    </div>
+
+    <div class="nav-header">Contact</div>
+    <div class="nav-item"><a href="#resume">Resume</a></div>
+    <div class="nav-item"><a href="#links">Links</a></div>
+
+    <div class="nav-header"><A href="#">&uarr;&nbsp;</a></div>
+  </nav>
+
+  <header>
+    <div>
+      <h1>Andy<br>Li</h1>
+      <h2>The University<br>of British Columbia</h2>
+    </div>
+  </header>
+
+
+  <section id="about">
+    <div class="section-item" id="summary">
+      <h1>Summary</h1>
+      <p>
+        I am a student at the University of British Columbia studying Computer Science. I am interested in
+        software development, machine learning, and data science. I have experience with Python, Java, and
+        C++. I am currently looking for internships in software development.
+      </p>
+    </div>
+
+    <section id="technical">
+      <script id="technical-template" type="x-tmpl-mustache">
+    {{#technical}}
+    <div class="section-item-wrap";>
+    <div class="section-item" id="{{id}}">
+      <h1>{{title}}</h1>
+      <h3>{{description}}</h3>
+      <ul>
+      {{#items}}
+        <li>{{{.}}}</li>
+      {{/items}}
+    </div>
+    </div>
+    {{/technical}}
+    </script>
+    </section>
+
+    <section id="projects">
+      <script id="project-template" type="x-tmpl-mustache">
+    {{#projects}}
+    <div class="section-item-wrap";>
+    <div class="section-item" id="{{id}}">
+      <h1>{{title}}</h1>
+      <p>{{{description}}}</p>
+      <h3>Languages and Technologies Used:</h3>
+      <ul>
+      {{#Technologies}}
+        <li>{{{.}}}</li>
+      {{/Technologies}}
+      </ul>
+    </div>
+    </div>
+    {{/projects}}
+    </script>
+    </section>
+
+    <section id="about">
+      <div class="section-item" id="resume">
+        <h1>Resume</h1>
+        <h3>last updated: July 2024</h3>
+
+        <iframe class="pdf" src="./assets/AndyLi_Resume.pdf" width="800" height="1100">
+        </iframe>
       </div>
 
-      <!--NEW SECTION -->
+      <!--
+    <div class="section-item" id="teaching">
+      <h1>Teaching Statement</h1>
+      <p><em>Under construction</em></p>
+    </div>
+-->
 
-      <div class="section-heading" onclick="toggleSection('skills-content')">
-        <h2>Skills and Expertise <i class="fas fa-chevron-down" id="dropdown-icon-skills"></i></h2>
-        <span class="description">Listed in arbitrary order</span>
+      <div class="section-item" id="links">
+        <h1>Contact</h1>
+        <h3>Feel free to reach out to me for basically anything :)</h3>
+        <p style="line-height: 14px;">
+          <a href="mailto:andyjli107@gmail.com" style="text-decoration: none; color: black"><img src="img/email.png"
+              style="width: 28px; margin: 0px 8px -8px 0px;">andyjli107 [at] gmail [dot] com</a>
+          <br><br>
+          <a href="https://github.com/andyjli0" style="text-decoration: none; color: black"><img src="img/github.png"
+              style="width: 25px; margin: 0px 12px -8px 2px;">andyjli0<a />
+            <br><br>
+            <a href="https://www.linkedin.com/in/andyjli0/" style="text-decoration: none; color: black"><img
+                src="img/linkedin.png" style="width: 25px; margin: 0px 9px -6px 3px;">andyjli0</a>
+            <br>
+        
+        </p>
       </div>
+    </section>
 
-      <div class="section-body" id="skills-content">
-        <table class="table">
-          <tbody>
-            <tr>
-              <th scope="col" style="color: goldenrod; text-align: center">Languages</th>
-              <th scope="col" style="color: teal; text-align: center;">Libraries</th>
-              <th scope="col" style="color: cornflowerblue; text-align: center;">Technologies</th>
-              <th scope="col" style="color: mediumorchid; text-align: center;">Coursework</th>
+    <footer>
+<!-- 
+      <button class="reset-button" onclick="resetSketch()">↻</button> <button class="stop-button"
+        onclick="stopSketch()">■</button> -->
 
-            </tr>
-            <tr>
-              <td style="text-align: center">Java</td>
-              <td style="text-align: center">React</td>
-              <td style="text-align: center">Git</td>
-              <td style="text-align: center">Software Engineering*</td>
+    </footer>
 
-            </tr>
-            <tr>
-              <td style="text-align: center">C/C++</td>
-              <td style="text-align: center">JUnit</td>
-              <td style="text-align: center">Linux</td>
-              <td style="text-align: center">Algorithm Design & Analysis</td>
+    <script type="text/javascript" src="main.js"></script>
 
-            </tr>
-            <tr>
-              <td style="text-align: center">Python</td>
-              <td style="text-align: center">Pytest</td>
-              <td style="text-align: center"><span class="latex">L<span>a</span>T<span>e</span>X</span></td>
-              <td style="text-align: center;">Operating Systems</td>
-            </tr>
-            <tr>
-              <td style="text-align: center">JavaScript</td>
-              <td style="text-align: center">NumPy</td>
-              <td style="text-align: center">IntelliJ</td>
-              <td style="text-align: center;">Computer Networking</td>
-            </tr>
-          </tbody>
-        </table>
-        <span class="note">*currently taking</span>
-      </div>
-
-      <!--NEW SECTION -->
-
-      <div class="section-heading" onclick="toggleSection('projects-content')">
-        <h2>Projects <i class="fas fa-chevron-down" id="dropdown-icon-projects"></i></h2>
-        <span class="description"> A list of all my notable previous projects.</span>
-      </div>
-
-      <div class="section-body" id="projects-content">
-
-        <div class="project">
-          <h4><strong>C++ Ray Tracer</strong></h4>
-          <span>- Ray tracer implemented in C++ following Peter Shirley's 'Ray Tracing One Weekend' </span>
-          <img src="./assets/RayTracer.png" alt="Project 0 Image" class="image">
-          <button onclick="rayTracer()">Project Repository</button>
-        </div>
-
-        <div class="project">
-          <h4><strong>Image Compressor</strong></h4>
-          <span>- Quad-tree storage system with simple editing tools</span><br>
-          <img src="./assets/malachi1.png" alt="Project 1-1 Image" class="image-inline">
-          <img src="./assets/malachi2.png" alt="Project 1-2 Image" class="image-inline">
-
-          <button onclick="prunify()">Project Repository</button>
-        </div>
-
-        <div class="project">
-          <h4><strong>3 Body Simulation</strong></h4>
-          <span>- visualization of a 3 body system using matplotlib </span>
-          <img src="./assets/threeBodyProblem.png" alt="Project 2 Image" class="image">
-          <button onclick="threeBodySystem()">Project Repository</button>
-        </div>
-
-
-        <div class="project">
-          <h4><strong>JavaCards</strong></h4>
-          <span>- Java flashcard application with the JavaSwing GUI </span>
-          <img src="./assets/JavaCards.png" alt="Project 3 Image" class="image">
-          <button onclick="javaCards()">Project Repository</button>
-        </div>
-
-        <div class="project">
-          <h4><strong>IMGuessr.ai</strong></h4>
-          <span>- <em>Skribblio</em> inspired prompt guessing game powered by DALL &#x00B7; E art</span>
-          <img src="./assets/IMGuesser.png" alt="Project 4 Image" class="image">
-          <button onclick="promptGuesser()">Project Repository</button>
-        </div>
-      </div>
-
-      <!--NEW SECTION -->
-      <div class="section-heading" onclick="toggleSection('resume-content')">
-        <h2>Resume & Contact <i class="fas fa-chevron-down" id="dropdown-icon-resume"></i></h2>
-        <span class="description"> Learn more about me!</span>
-      </div>
-
-
-      <div class="contact-section" id="resume-content">
-        <a href="./assets/Andy Li resume.pdf" target="_blank" class="contact-link" id="resume">
-          <i class="fas fa-file-pdf"></i> Resume
-        </a>
-        <a href="https://github.com/andyjli0" target="_blank" class="contact-link" id="github">
-          <i class="fab fa-github"></i> GitHub
-        </a>
-        <a href="mailto:andyjiaanli@gmail.com" target="_blank" class="contact-link" id="email">
-          <i class="fas fa-envelope"></i> Email
-        </a>
-        <a href="https://www.linkedin.com/in/andyjli0/" target="_blank" class="contact-link" id="linkedin">
-          <i class="fab fa-linkedin"></i> LinkedIn
-        </a>
-      </div>
-
-      <div id="empty-space"></div>
-
-
-    </main>
-
-    <p class="footer">
-      Press <kbd>Alt</kbd> + <kbd>t</kbd> to toggle between light and dark mode. <br>
-        © 2023 Andy Li |
-        Have a wonderful day!
-    </p>
-
-
-    <script src="main.js"></script>
-
-
-  </body>
+</body>
 
 </html>
