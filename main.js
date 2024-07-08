@@ -131,6 +131,7 @@ var talks = {
       A Talk I gave at the 2024 Canadian Undergraduate Mathematics Conference.
         `,
       "abstract": `Have you ever wondered how movies and games create such realistic fluid flows, like the flowing water of a river or the rising smoke from a fire? Fluid simulators are tools that make these effects possible in the virtual world. In this talk, I will discuss the fundamental properties of fluids, walk through how to create a basic fluid solver, and the math behind everything. We will cover the necessary mathematics, including the Naiver-Stokes equations, basic numerical methods, and the fundamentals of vector calculus, to achieve our goal.`,
+      
       "slides": ` `
     }
   ]
