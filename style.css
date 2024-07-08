@@ -4,7 +4,8 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6
+p {
     margin: 0px;
     padding: 0px;
     font-family: Helvetica, Arial, sans-serif;
@@ -146,7 +147,18 @@ header h2 {
     background-size: cover;
 }
 
-.reset-button, .stop-button {
+.abstract {
+    margin-top: 10px;
+}
+
+/* ########## FOOTER ########## */
+.footer {
+    height: 50px;
+    text-align: center;
+}
+
+.reset-button,
+.stop-button {
     position: fixed;
     bottom: 20px;
     width: 50px;
@@ -159,15 +171,18 @@ header h2 {
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  .reset-button {
+}
+
+.reset-button {
     left: 20px;
     background-color: #525151;
-  }
-  .stop-button {
-    left: 80px; /* Adjust this value as needed to position the button next to the reset button */
+}
+
+.stop-button {
+    left: 80px;
+    /* Adjust this value as needed to position the button next to the reset button */
     background-color: #525151;
-  }
+}
 
 @media only screen and (max-width: 805px) {
     nav {

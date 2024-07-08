@@ -8,7 +8,9 @@
     src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/4.0.1/mustache.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.4/p5.min.js"></script>
   <title>Andy Li</title>
+  <link rel="icon" type="image/x-icon" href="/assets/favicons/favicon.ico">
   <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="https://kit.fontawesome.com/3c34e63e95.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -26,11 +28,16 @@
     </div>
 
     <div class="nav-header">Projects</div>
+
+    <div class="nav-item"><a href="#fluidsimulation">Fluid Simulation Talk</a></div>
+
     <div id="nav-projects">
       <script id="project-nav-template" type="x-tmpl-mustache">
       {{#projects}}<div class="nav-item"><a href="#{{id}}">{{title}}</a></div>{{/projects}}
       </script>
     </div>
+
+
 
     <div class="nav-header">Contact</div>
     <div class="nav-item"><a href="#resume">Resume</a></div>
@@ -93,48 +100,56 @@
     </script>
     </section>
 
+    <section id="talks">
+      <script id="talk-template" type="x-tmpl-mustache">
+        {{#talks}}
+          <div class="section-item-wrap";>
+            <div class="section-item" id="{{id}}">
+              <h1>{{title}}</h1>
+              <p>{{{description}}}</p>
+              <h3>Abstract</h3>
+              <div class="abstract">
+                <span>{{{abstract}}}</span>
+            </div>
+            <div class="abstract" >
+              <a href="{{slides}}">View Slides</a>
+            </div>
+        {{/talks}}
+        </script>
+    </section>
+
     <section id="about">
       <div class="section-item" id="resume">
         <h1>Resume</h1>
         <h3>last updated: July 2024</h3>
 
-        <iframe class="pdf" src="./assets/AndyLi_Resume.pdf" width="800" height="1100">
+        <iframe class="pdf" src="./assets/Andy_Li_Resume.pdf" width="800" height="1100">
         </iframe>
       </div>
 
-      <!--
-    <div class="section-item" id="teaching">
-      <h1>Teaching Statement</h1>
-      <p><em>Under construction</em></p>
-    </div>
--->
 
       <div class="section-item" id="links">
         <h1>Contact</h1>
         <h3>Feel free to reach out to me for basically anything :)</h3>
         <p style="line-height: 14px;">
-          <a href="mailto:andyjli107@gmail.com" style="text-decoration: none; color: black"><img src="img/email.png"
-              style="width: 28px; margin: 0px 8px -8px 0px;">andyjli107 [at] gmail [dot] com</a>
+          <a href="mailto:andyjli107@gmail.com" style="text-decoration: none; color: black"><i
+              class="fa-solid fa-envelope"></i> andyjli107 [at] gmail [dot] com</a>
           <br><br>
-          <a href="https://github.com/andyjli0" style="text-decoration: none; color: black"><img src="img/github.png"
-              style="width: 25px; margin: 0px 12px -8px 2px;">andyjli0<a />
+          <a href="https://github.com/andyjli0" style="text-decoration: none; color: black"><i
+              class="fa-brands fa-github"></i> andyjli0<a />
             <br><br>
-            <a href="https://www.linkedin.com/in/andyjli0/" style="text-decoration: none; color: black"><img
-                src="img/linkedin.png" style="width: 25px; margin: 0px 9px -6px 3px;">andyjli0</a>
+            <a href="https://www.linkedin.com/in/andyjli0/" style="text-decoration: none; color: black"><i
+                class="fa-brands fa-linkedin"></i> andyjli0</a>
             <br>
-        
+
         </p>
       </div>
     </section>
 
-    <footer>
-<!-- 
-      <button class="reset-button" onclick="resetSketch()">↻</button> <button class="stop-button"
-        onclick="stopSketch()">■</button> -->
+    <section class="footer">
+      <p>Andy Li <i class="fa-regular fa-copyright"></i> 2024</p>
 
-    </footer>
-
-    <script type="text/javascript" src="main.js"></script>
+      <script type="text/javascript" src="main.js"></script>
 
 </body>
 
