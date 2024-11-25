@@ -2,153 +2,159 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script type="text/javascript"
-    src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/4.0.1/mustache.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.4/p5.min.js"></script>
-  <title>Andy Li</title>
-  <link rel="icon" type="image/x-icon" href="/assets/favicons/favicon.ico">
-  <link rel="stylesheet" type="text/css" href="style.css">
-  <script src="https://kit.fontawesome.com/3c34e63e95.js" crossorigin="anonymous"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <meta name="theme-color" content="#4e5f72">
+    <title>Andy Li</title>
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/index.css" rel="stylesheet">
 </head>
 
 <body>
-
-  <nav>
-
-    <div class="nav-header">About</div>
-    <div class="nav-item"><a href="#about">Summary</a></div>
-
-    <div class="nav-header">Technical Skills</div>
-    <div id="nav-technical">
-      <script id="technical-nav-template" type="x-tmpl-mustache">
-      {{#technical}}<div class="nav-item"><a href="#{{id}}">{{title}}</a></div>{{/technical}}
-      </script>
-    </div>
-
-    <div class="nav-header">Projects</div>
-
-    <div class="nav-item"><a href="#fluidsimulation">Fluid Simulation Talk</a></div>
-
-    <div id="nav-projects">
-      <script id="project-nav-template" type="x-tmpl-mustache">
-      {{#projects}}<div class="nav-item"><a href="#{{id}}">{{title}}</a></div>{{/projects}}
-      </script>
-    </div>
-
-
-
-    <div class="nav-header">Contact</div>
-    <div class="nav-item"><a href="#resume">Resume</a></div>
-    <div class="nav-item"><a href="#links">Links</a></div>
-
-    <div class="nav-header"><A href="#">&uarr;&nbsp;</a></div>
-  </nav>
-
-  <header>
-    <div>
-      <h1>Andy<br>Li</h1>
-      <h2>The University<br>of British Columbia</h2>
-    </div>
-  </header>
-
-
-  <section id="about">
-    <div class="section-item" id="summary">
-      <h1>Summary</h1>
-      <p>
-        Hello all! I'm a 3rd year Computer Science student at the University of British Columbia studying Mathetmatics and Computer Science. Currently, I'm a Software Engineer at <em>Incognito Software Systems</em>, and a TA for UBC's introductory OOP course: <em>CPSC 210</em>. I'm interested in graphics programming and development, and I'm always looking for new opportunities to learn and grow. Outside of school and work, I'm currently training for a half marathon, and I used to Wrestle for UBC's competitve team. 
-      </p>
-    </div>
-
-    <section id="technical">
-      <script id="technical-template" type="x-tmpl-mustache">
-    {{#technical}}
-    <div class="section-item-wrap";>
-    <div class="section-item" id="{{id}}">
-      <h1>{{title}}</h1>
-      <h3>{{description}}</h3>
-      <ul>
-      {{#items}}
-        <li>{{{.}}}</li>
-      {{/items}}
-    </div>
-    </div>
-    {{/technical}}
-    </script>
-    </section>
-
-    <section id="projects">
-      <script id="project-template" type="x-tmpl-mustache">
-    {{#projects}}
-    <div class="section-item-wrap";>
-    <div class="section-item" id="{{id}}">
-      <h1>{{title}}</h1>
-      <p>{{{description}}}</p>
-      <h3>Languages and Technologies Used:</h3>
-      <ul>
-      {{#Technologies}}
-        <li>{{{.}}}</li>
-      {{/Technologies}}
-      </ul>
-    </div>
-    </div>
-    {{/projects}}
-    </script>
-    </section>
-
-    <section id="talks">
-      <script id="talk-template" type="x-tmpl-mustache">
-        {{#talks}}
-          <div class="section-item-wrap";>
-            <div class="section-item" id="{{id}}">
-              <h1>{{title}}</h1>
-              <p>{{{description}}}</p>
-              <h3>Abstract</h3>
-              <div class="abstract">
-                <span>{{{abstract}}}</span>
+    <div class="wrapper animated-1">
+        <div class="header animated-1">
+            <div class="header-left">
+                <h1 class="header-name">Andy Li</h1>
+                <h2 class="header-subname">Software Engineer</h2>
+                <div class="header-info section-info">
+                    Software Engineer with web development, graphics programming, and teaching experience. Take a look
+                    at my <a href="resume/Andy_Li_Resume.pdf" target="_blank" class="animated-1">resume</a>!
+                    <br>
+                    <br>
+                    Want to talk? <a href="#contact" class="animated-1 contact-link">Get in touch</a>!
+                </div>
             </div>
-            <div class="abstract" >
-              <a href="assets/cumc_slides.pdf" target="_blank">View Slides</a>
-
+            <div class="header-nav">
+                <a href="#contact" class="animated-2 contact-link">contact</a>
+                <div class="header-nav-space"></div>
+                <a href="resume/Andy_Li_Resume.pdf" target="_blank" class="animated-2">resume</a>
             </div>
-        {{/talks}}
-        </script>
-    </section>
-
-    <section id="about">
-      <div class="section-item" id="resume">
-        <h1>Resume</h1>
-        <h3>last updated: July 2024</h3>
-
-        <iframe class="pdf" src="./assets/Andy_Li_Resume.pdf" width="800" height="1100">
-        </iframe>
-      </div>
-
-
-      <div class="section-item" id="links">
-        <h1>Contact</h1>
-        <h3>Feel free to reach out to me for basically anything :)</h3>
-        <p style="line-height: 14px;">
-          <a href="mailto:andyjli107@gmail.com" style="text-decoration: none; color: black"><i
-              class="fa-solid fa-envelope"></i> andyjli107 [at] gmail [dot] com</a>
-          <br><br>
-          <a href="https://github.com/andyjli0" style="text-decoration: none; color: black"><i
-              class="fa-brands fa-github"></i> andyjli0<a />
-            <br><br>
-            <a href="https://www.linkedin.com/in/andyjli0/" style="text-decoration: none; color: black"><i
-                class="fa-brands fa-linkedin"></i> andyjli0</a>
-            <br>
-
-        </p>
-      </div>
-    </section>
-
-    <section class="footer">
-      <p>Andy Li <i class="fa-regular fa-copyright"></i> 2024</p>
-
-      <script type="text/javascript" src="main.js"></script>
+        </div>
+        <div class="section-big section-incognito animated-1">
+            <div class="job-position">Software QA Engineer Intern</div>
+            <div class="job-title">Incognito Software Systems</div>
+            <div class="job-info section-info">
+                I'm currently working at Incognito Software Systems on their ECO team. I've worked on automated testing
+                with JUnit, Selenium, and Playwright in TypeScript, as well as continuous integration with Jenkins. I'm
+                currently developing the entire test project for one of our services AC, an IP address management
+                system.
+            </div>
+            <img class="big-image" id="incognito-image" src="images/Incognito.png" alt="incognito">
+        </div>
+        <div class="section-big section-cpsc210 animated-1">
+            <div class="job-position">Teaching Assistant</div>
+            <div class="job-title">The University of British Columbia CPSC210</div>
+            <div class="job-info section-info">
+                I worked as a teaching assistant for 3 semesters for UBC's Introduction to software construction course.
+                As a TA, I lead weekly labs, held office hours, graded projects, and help teach students the
+                fundamentals of OOP and software design with Java.
+            </div>
+            <img class="big-image" id="java-image" src="images/java.png" alt="skia">
+        </div>
+        <div class="section-big section-gamedev animated-1">
+            <div class="job-position">Student Developer</div>
+            <div class="job-title">Game Development Club </div>
+            <div class="job-info section-info">
+                Through fall 2023 to spring 2024, I worked with a small team on a 2D tile-based game in the Godot game
+                engine.
+                I designed most of the initial code structure and created the movement and tile management system with
+                C# and GDscript.
+            </div>
+            <img class="big-image" src="images/gamedev.png" alt="skia">
+        </div>
+        <div class="small-sections">
+            <a href="images/cumc_slides.pdf" target="_blank" class="section-small">
+                <div class="section-small-content">
+                    <div class="section-small-image animated-2" style="background:url(images/fluid.jpg)"></div>
+                    <div class="section-small-info animated-2">
+                        <div class="job-maininfo">
+                            <div class="job-position">Author</div>
+                            <div class="job-title">Introduction to Fluid Simulation</div>
+                        </div>
+                        <div class="job-small-info section-info animated-2">
+                            A Talk I gave at the 2024 Canadian Undergraduate Mathematics Conference. The presentation covered various real-time methods
+                            for modeling fluid dynamics and their mathematical background.
+                            <div class="job-button">
+                                View Slides
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="https://devpost.com/software/punch-n-run" target="_blank" class="section-small">
+                <div class="section-small-content">
+                    <div class="section-small-image animated-2" style="background:url(images/punch.jpeg)"></div>
+                    <div class="section-small-info animated-2">
+                        <div class="job-maininfo">
+                            <div class="job-position">Developer</div>
+                            <div class="job-title">Punch-n-Run</div>
+                        </div>
+                        <div class="job-small-info section-info animated-2">
+                            I helped develop a computer vision punching game that combines physical exercise with some
+                            friendly gameplay.
+                            <div class="job-button">
+                                Read More
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="https://gitfront.io/r/Andyjli0/FonBdihK2nYb/Image-Compressor/" target="_blank"
+                class="section-small">
+                <div class="section-small-content">
+                    <div class="section-small-image animated-2" style="background:url(images/compress.jpeg)"></div>
+                    <div class="section-small-info animated-2">
+                        <div class="job-maininfo">
+                            <div class="job-position">Creator</div>
+                            <div class="job-title">Compressor</div>
+                        </div>
+                        <div class="job-small-info section-info animated-2">
+                            An image compressor in C++ that uses a quadtree image compression technique supporting utility functions for image manipulation.
+                            The algorithm was written by myself.
+                            <div class="job-button">
+                                View Code
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="https://github.com/AndyJLi0/Anthill" target="_blank" class="section-small">
+                <div class="section-small-content">
+                    <div class="section-small-image animated-2" style="background:url(images/anthill.jpg)"></div>
+                    <div class="section-small-info animated-2">
+                        <div class="job-maininfo">
+                            <div class="job-position">Developer</div>
+                            <div class="job-title">AntHill</div>
+                        </div>
+                        <div class="job-small-info section-info animated-2">
+                            An educational web app that aims to help new coders learn syntax and basic programming concepts.
+                            <div class="job-button">
+                                View Code
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="footer" id="contact">
+            <h1 class="footer-title">Interested in my work? Contact me!</h1>
+            <div class="contact-info">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                    fill="#e8eaed">
+                    <path
+                        d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm320-280L160-640v400h640v-400L480-440Zm0-80 320-200H160l320 200ZM160-640v-80 480-400Z" />
+                </svg>
+                <span class="email">
+                    <script>
+                        var a = ['andyjli107@g', 'mail.com'];
+                        document.write('<a class="animated-1" href="mailto:' + a[0] + a[1] + '">' + a[0] + a[1] + '</a>');
+                    </script>
+                </span>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/main.js"></script>
 
 </body>
 
