@@ -1,4 +1,3 @@
 # andyli
 
-My personal website
-this is a test
+stuff about me
